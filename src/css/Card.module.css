@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+.container {
+  padding-top: 4rem;
+  background-color: rgba(7, 7, 37, 0.683);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  margin-bottom: 20px;
+  width: 90%;
+  background-color: rgb(8, 8, 47);
+  color: white;
+  box-shadow: 10px 10px 20px black;
+  border: black 4px solid;
+}
+.card_img {
+  width: 20%;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+.card_content {
+  width: 80%;
+  font-size: large;
+  margin: 20px;
+}
