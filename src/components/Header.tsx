@@ -26,7 +26,7 @@ function Header() {
     <nav className={estilos.nav}>
       <div id={estilos.searcher}>
         <a href="" id={estilos.lupa}>
-          <img src={`${process.env.PUBLIC_URL}/lupa.png`} alt="" />
+          <img src="./testimonios/lupa.png" alt="" />
         </a>
         <input
           id={estilos.search_box}
@@ -34,7 +34,7 @@ function Header() {
           placeholder="Search 10,700 + Tutorials"
         />
         <a href="" id={estilos.logo}>
-          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="" />
+          <img src="./testimonios/logo.png" alt="" />
         </a>
       </div>
 
@@ -43,7 +43,7 @@ function Header() {
           className={estilos.btn}
           onClick={(e) => handleClick(e, "idioma")}
         >
-          <img src={`${process.env.PUBLIC_URL}/idioma.png`} alt="" />
+          <img src="./testimonios/idioma.png" alt="" />
         </button>
         <button
           className={estilos.btn}
@@ -53,7 +53,7 @@ function Header() {
           <p>Menu</p>
         </button>
         <button className={estilos.btn}>
-          <img src={`${process.env.PUBLIC_URL}/avatar.png`} alt="" />
+          <img src="./testimonios/avatar.png" alt="" />
         </button>
         <ul
           className={`${

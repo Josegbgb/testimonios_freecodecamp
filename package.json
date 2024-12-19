@@ -1,9 +1,9 @@
 {
+  "homepage": "http://Josegbgb.github.io/testimonios",
   "name": "react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Josegbgb.github.io/testimonios",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
