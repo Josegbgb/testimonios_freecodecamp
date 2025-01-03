@@ -8,6 +8,8 @@ section {
     radial-gradient(circle, #700030 0, #003f88 100%);
   padding-left: 15px;
   padding-right: 15px;
+  align-content: center;
+  height: 70vh;
 }
 #padding_container {
   width: 90%;
@@ -39,4 +41,34 @@ section {
   font-size: 1.3rem;
   height: 60px;
   background-image: linear-gradient(#fecc4c, #ffac33);
+}
+
+@media (max-width: 480px) {
+  section {
+    height: 100vh;
+    align-content: center;
+  }
+
+  .titulos {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  #btn_start {
+    width: 50%;
+    min-width: 0;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  section {
+    height: 60vh;
+    align-content: center;
+  }
+  .titulos {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  #btn_start {
+    width: 50%;
+    min-width: 0;
+  }
 }

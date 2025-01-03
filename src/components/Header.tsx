@@ -1,6 +1,12 @@
 import { useState } from "react";
 import estilos from "../css/Header.module.css";
 import { MouseEvent } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMagnifyingGlass,
+  faUser,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
   const width = {
@@ -26,24 +32,23 @@ function Header() {
     <nav className={estilos.nav}>
       <div id={estilos.searcher}>
         <a href="" id={estilos.lupa}>
-          <img src={`${process.env.PUBLIC_URL}/lupa.png`} alt="" />
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
         </a>
         <input
           id={estilos.search_box}
           type="search"
           placeholder="Search 10,700 + Tutorials"
         />
-        <a href="" id={estilos.logo}>
-          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="" />
-        </a>
       </div>
-
+      <a href="" id={estilos.logo}>
+        <img src="/testimonios_freecodecamp/logo.png" alt="" />
+      </a>
       <div className={estilos.buttons}>
         <button
-          className={estilos.btn}
+          className={`${estilos.btn} ${estilos.btn_globo}`}
           onClick={(e) => handleClick(e, "idioma")}
         >
-          <img src={`${process.env.PUBLIC_URL}/idioma.png`} alt="" />
+          <FontAwesomeIcon icon={faGlobe} />
         </button>
         <button
           className={estilos.btn}
@@ -53,7 +58,7 @@ function Header() {
           <p>Menu</p>
         </button>
         <button className={estilos.btn}>
-          <img src={`${process.env.PUBLIC_URL}/avatar.png`} alt="" />
+          <FontAwesomeIcon icon={faUser} />
         </button>
         <ul
           className={`${
