@@ -1,7 +1,8 @@
 import { useState } from "react";
 import estilos from "../css/Header.module.css";
-import { MouseEvent } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslation } from "react-i18next";
 import {
   faMagnifyingGlass,
   faUser,
@@ -9,25 +10,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
-  const width = {
-    width: "60px",
-  };
+  const { t, i18n } = useTranslation(["welcome"]);
   const [isTrueIdioma, setTrueIdioma] = useState(false);
-  const [isTrueMenu, setTrueMenu] = useState(false);
 
-  const handleClick = (_event: MouseEvent, buttonName: string) => {
-    if (buttonName === "menu") {
-      if (isTrueIdioma === true) {
-        setTrueIdioma(!isTrueIdioma);
-      }
-      setTrueMenu(!isTrueMenu);
-    } else {
-      if (isTrueMenu === true) {
-        setTrueMenu(!isTrueMenu);
-      }
-      setTrueIdioma(!isTrueIdioma);
-    }
+  const handleClick = () => {
+    setTrueIdioma(!isTrueIdioma);
   };
+  function changeLanguage(idioma: string) {
+    i18n.changeLanguage(idioma);
+    setTrueIdioma(!isTrueIdioma);
+  }
   return (
     <nav className={estilos.nav}>
       <div id={estilos.searcher}>
@@ -37,72 +29,37 @@ function Header() {
         <input
           id={estilos.search_box}
           type="search"
-          placeholder="Search 10,700 + Tutorials"
+          placeholder={t("inputText")}
         />
       </div>
+
       <a href="" id={estilos.logo}>
         <img src="/testimonios_freecodecamp/logo.png" alt="" />
       </a>
+
       <div className={estilos.buttons}>
         <button
           className={`${estilos.btn} ${estilos.btn_globo}`}
-          onClick={(e) => handleClick(e, "idioma")}
+          onClick={handleClick}
         >
           <FontAwesomeIcon icon={faGlobe} />
         </button>
-        <button
-          className={estilos.btn}
-          style={width}
-          onClick={(e) => handleClick(e, "menu")}
-        >
-          <p>Menu</p>
-        </button>
+
         <button className={estilos.btn}>
           <FontAwesomeIcon icon={faUser} />
         </button>
+
         <ul
           className={`${
             isTrueIdioma ? estilos.list_conta : estilos.list_container
           } `}
         >
           <li>
-            <button>English</button>
+            <button onClick={() => changeLanguage("en")}>{t("btn_1")}</button>
           </li>
           <li>
-            <button>Español</button>
+            <button onClick={() => changeLanguage("es")}>{t("btn_2")}</button>
           </li>
-          <li>
-            <button>Italiano</button>
-          </li>
-          <li>
-            <button>Portugues</button>
-          </li>
-          <li>
-            <button>Deutsch</button>
-          </li>
-        </ul>
-
-        <ul
-          className={`${
-            isTrueMenu ? estilos.list_conta : estilos.list_container
-          }`}
-        >
-          <li>
-            <button>Donate</button>
-          </li>
-          <li>
-            <button>Curriculum</button>
-          </li>
-          <li>
-            <button>Profile</button>
-          </li>
-          <li>
-            <button>Settings</button>
-          </li>
-          <li>
-            <button>Forum</button>
-          </li>
-          <li></li>
         </ul>
       </div>
     </nav>

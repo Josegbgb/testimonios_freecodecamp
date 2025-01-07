@@ -1,0 +1,19 @@
+{
+  "inputText": "Buscar",
+  "btn_1": "Ingles",
+  "btn_2": "Español",
+  "title": "Aprende a programar.",
+  "title2": "Crea proyectos.",
+  "title3": "Adquiere certificaciones.",
+  "title4": "Todo de forma gratuita.",
+  "btn_start": "Empezar",
+  "person1_name": "Shawn Wang de Singapur",
+  "person1_job": "Ingeniero de software en Amazon",
+  "person1_text": "Da miedo cambiar de carrera. Solo gané confianza en que podía programar trabajando a través de las cientos de horas de lecciones gratuitas en freeCodeCamp. En un año tuve un trabajo con salario de seis cifras como Ingeniero de software. freeCodeCamp cambió mi vida.",
+  "person2_name": "Sarah Chima de Nigeria",
+  "person2_job": "Ingeniera de software en ChatDesk",
+  "person2_text": "`freeCodeCamp fue la entrada a mi carrera como desarrolladora de software. La buena estructura curricular llevo mis conocimientos de programacion desde un nivel totalmente principiante a un nivel de gran confianza. Fue todo lo que necesitaba para conseguir mi primer trabajo de desarrolladora en una asombrosa compañia.`",
+  "person3_name": "Emma Bostian de Suecia",
+  "person3_job": "Ingeniera de software en Spotify",
+  "person3_text": "`Siempre he luchado con aprender JavaScript. He tomado muchos cursos sin embargo el curso de freeCodeCamp fue el unico que funciono. Estudiar JavaScript asi como las estructuras de datos y algoritmos en freeCodeCamp me dio las habilidades y confianza que necesitaba para conseguir mi trabajo soñado como una Ingeniera de software en Spotify.`"
+}
